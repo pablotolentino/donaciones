@@ -1,5 +1,5 @@
 package modelos
 
 class DonacionModel {
-     var monto: decimal=0
+     var monto= 0.0
 }

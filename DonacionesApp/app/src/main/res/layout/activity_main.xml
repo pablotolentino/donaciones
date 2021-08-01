@@ -7,48 +7,63 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="¡Muchas gracias por el apoyo! 🎉 Pablo Tolentino"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¡Muchas gracias por el apoyo! 🎉 Pablo Tolentino"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center_horizontal"
+            android:width="300dip"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintVertical_bias="0.05" />
 
-    <EditText
-        android:id="@+id/montoDonar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Ingrese el monto a donar"
-        android:inputType="numberDecimal"
-        android:text="@={donacion.monto}"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.422"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.588"
-        />
+
+    <RadioGroup
+            android:id="@+id/opciones_donaciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#dbeceb"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintVertical_bias="0.20"
+            android:padding="15dp">
+        <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selecciona la cantidad que deseas donar"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                tools:layout_editor_absoluteY="170dp"
+                tools:layout_editor_absoluteX="20dp" />
+
+    </RadioGroup>
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="117dp"
-        android:layout_marginLeft="117dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="136dp"
-        android:layout_marginRight="136dp"
-        android:layout_marginBottom="203dp"
-        android:background="#9C27B0"
-        app:backgroundTint="#4CAF50"
-        app:icon="@drawable/donate_with_googlepay_button_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/montoDonar"
-        android:onClick="iniciarProcesoPago"/>
+            android:id="@+id/botonIniciarPago"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:background="#9B2CAE"
+            app:backgroundTint="#51B15D"
+            app:icon="@drawable/donate_with_googlepay_button_content"
+            android:onClick="iniciarProcesoPago"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintVertical_bias="0.549"
+            android:layout_marginTop="15dp"/>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
